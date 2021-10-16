@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/recommend_linear"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/top_linear_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recomments"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_recomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                tools:listitem="@layout/recomment_list"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtname1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recommend_linear"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:text="All Products"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtname1"
+        tools:listitem="@layout/items_list"/>
+
+</RelativeLayout>
